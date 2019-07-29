@@ -13,9 +13,23 @@ class TodoItem extends Component {
       { this.props.item }
     </div>
   }
+  //一个组件要从父组件接受参数
+  //只要父组件的render函数被执行,子组建的这个生命周期函数就会被执行
+  componentWillReceiveProps() {
+    console.log('componentWillReceiveProps')
+  }
+  shouldComponentUpadte (nextProps, nextState) {
+    if (nextProps.item !== this.props.item) {
+      return true
+    }
+    return false
+  }
+  componentWillUnmount() {
+    console.log('componentWillUnmount')
+  }
 }
 TodoItem.propType ={
-  item: PropTypes.arrayOf(PropTypes.string, PropTypes.number),
+  item: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   deleteItem:PropTypes.func,
   index: PropTypes.number
 }

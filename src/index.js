@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // all in js
 // import App from './App';
-import TodoList from './TodoList'
+import TodoList from './TodoList2'
 //pwa
 //https协议服务器
 import * as serviceWorker from './serviceWorker';
