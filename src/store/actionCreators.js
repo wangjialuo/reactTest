@@ -1,4 +1,4 @@
-import {ADD_TODO_ITEM, CHANGE_INPUT_VALUE, DELETE_INPUT_VALUE} from "./actionTypes";
+import {ADD_TODO_ITEM, CHANGE_INPUT_VALUE, DELETE_INPUT_VALUE, INIT_LIST_ACTION, GET_INIT_CREATE} from "./actionTypes";
 
 export const getInputChangeAction = (value) => ({
   type: CHANGE_INPUT_VALUE,
@@ -13,3 +13,18 @@ export const getDeleteItemAction = (value) => ({
   value
 })
 
+export const initListAction = (value) => ({
+  type: INIT_LIST_ACTION,
+  value
+})
+// export const getTodoList = () => {
+//   return (dispatch) => {
+//     axios.get('http://localhost:2000/api/todolist').then((res) => {
+//       const data = res.data
+//       dispatch(initListAction(data))
+//     })
+//   }
+// }
+export const getInitCreate = () =>({
+  type: GET_INIT_CREATE,
+})
